@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upgraded Proxy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <input id="url-input" type="text" placeholder="Enter URL">
+  <button onclick="openTab()">Go</button>
+  <button onclick="toggleDark()">🌙 / ☀️</button>
+</header>
+
+<div id="tabs"></div>
+
+<script src="main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/static/sw.js');
+}
+</script>
+</body>
+</html>
